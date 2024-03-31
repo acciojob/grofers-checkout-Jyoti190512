@@ -4,8 +4,7 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
-	// Get all the prices from the table
-    const prices = document.querySelectorAll(".price");
+	 const prices = document.querySelectorAll(".price");
     
     // Initialize total price
     let totalPrice = 0;
@@ -15,8 +14,12 @@ const getSum = () => {
         totalPrice += parseInt(price.textContent);
     });
     
-    // Display the total price
-    alert("Total Price: " + totalPrice + " Rs");
+    // Create a new element to display the total price
+    const totalPriceElement = document.createElement("div");
+    totalPriceElement.textContent = "Total Price: " + totalPrice + " Rs";
+    
+    // Append the total price element to the body of the document
+    document.body.appendChild(totalPriceElement);
   
 };
 
